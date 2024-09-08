@@ -1,1 +1,3 @@
-# SmartResumeAnalyzer
+# Smart Resume Analyzer
+
+A Python project.
