@@ -1,1 +1,25 @@
-# This is the templates/result.html file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Resume Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <h2>Skills Identified:</h2>
+    <ul>
+        {% for skill in feedback.skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+    <h2>ATS Score: {{ ats_score.ats_score }}</h2>
+    <h2>Grammar Suggestions:</h2>
+    <ul>
+        {% for suggestion in grammar_feedback.suggestions %}
+        <li>{{ suggestion.message }} at {{ suggestion.offset }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
