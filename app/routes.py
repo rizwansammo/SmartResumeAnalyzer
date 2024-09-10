@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request
 from .resume_analyzer import analyze_resume
 from .ats_checker import check_ats
 from .grammar_checker import check_grammar
+from .ats_checker import check_ats
 
 main = Blueprint('main', __name__)
 
