@@ -1,1 +1,5 @@
-# This is the requirements.txt file
+flask
+spacy
+PyPDF2
+language-tool-python
+pytest
